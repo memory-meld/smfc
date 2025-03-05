@@ -1,4 +1,15 @@
 ﻿
+Installation:
+```shell
+sudo cp src/smfc.py /usr/local/bin/
+sudo mkdir -p /usr/local/etc/smfc
+sudo cp src/samples/smfc.conf /usr/local/etc/smfc
+sudo cp src/smfc.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now smfc.service
+sudo systemctl status --no-pager --full smfc.service
+```
+
 # smfc
 [![Tests](https://github.com/petersulyok/smfc/actions/workflows/test.yml/badge.svg)
 ](https://github.com/petersulyok/smfc/actions/workflows/tests.yml) [![Codecov](https://codecov.io/gh/petersulyok/smfc/branch/main/graph/badge.svg)
